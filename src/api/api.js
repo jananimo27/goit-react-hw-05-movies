@@ -31,19 +31,3 @@ export const fetchMovieReviews = async movieId => {
   const response = await axios.get(`movie/${movieId}/reviews?`);
   return response.data.results;
 };
-
-// Generic function to fetch data from the TMDb API
-// const fetchData = async (path, params = '') => {
-//   const response = await axios.get(`${path}${params}`);
-//   return response.data.results || response.data;
-// };
-
-// export const fetchTrendingMovies = () => fetchData('trending/movie/day');
-
-// export const fetchMovieByQuery = movieName => fetchData('search/movie', `?query=${movieName}`);
-
-// export const fetchMovieDetails = movieId => fetchData(`movie/${movieId}`);
-
-// export const fetchMovieCast = movieId => fetchData(`movie/${movieId}/credits`).then(data => data.cast);
-
-// export const fetchMovieReviews = movieId => fetchData(`movie/${movieId}/reviews`);
